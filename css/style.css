@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+#topo {
+    background-image: url("../images/banner_topo.png");
+    background-size: cover; /* Qtde que a imagem vai ocupar na tela */
+    background-repeat: no-repeat; /* Previne que a imagem seja duplicada*/
+    padding: 0 100px;
+	padding-top: 30px;
+    padding-bottom: 95px;
+	position: relative;
+    
+}
+
+#topo form label {
+	display: block;
+	font-size: 12px;
+	margin-bottom: 4px;
+	font-weight: bold;
+}
+
+#topo form input,
+#topo form select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #c6c6c6;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    transition-duration: 300ms;
+}
+
+#topo form input:focus, 
+#topo form select:focus {
+    border-color: #c61066;
+}
+
+#topo .logo {
+	margin-bottom: 80px;
+}
+
+#topo .conteudo {
+    width: 505px;
+    color: #ffff;
+}
+
+#topo .conteudo h6 {
+	font-size: 18px;
+}
+
+#topo .conteudo h1 {
+	font-size: 64px;
+}
+
+#topo .conteudo p {
+	margin-top: 26px;
+}
+
+#topo form {
+	width: 350px;
+	background-color: #ffffff;
+
+	position: absolute;
+	padding: 16px;
+	padding-bottom: 26px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+	top: 130px;
+	right: 235px;
+    	
+}
+
+#topo form h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#topo form p {
+    margin-bottom: 16px;
+}
+
+#topo form button {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #c61066;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: 300ms;
+
+}
+
+#topo form button:hover {
+    background-color: #9a064b;
+    cursor: pointer;
+
+}
+
+#topo form button:disabled {
+    background-color: #c6c6c6;
+    color: #333333;
+}
+
+@media only screen and (max-width: 1024px) {
+    #topo {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    #topo form {
+        right: 60px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    
+    #topo form {
+        right: 60px;
+        position: initial; /* Resetando a position, top e right */
+        top: initial;
+        right: initial;
+        margin-top: 26px;
+        width: 100%; /* Mudando a largura do form*/
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Ajustar o width dos conteúdos*/
+    #topo {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #topo .conteudo {
+        width: 100%;
+    }
+
+    #topo .conteudo h6,
+    #topo .conteudo h1 {
+        text-align: center;
+    }
+
+    #topo .conteudo p {
+        text-align: justify;
+    }
+}
