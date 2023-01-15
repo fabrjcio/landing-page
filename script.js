@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 function salvarNaAPI() {
     event.preventDefault(); /** */
     let aluno = {
@@ -12,14 +16,14 @@ function salvarNaAPI() {
 
 
     fetch("https://63c305a5b0c286fbe5f7d74d.mockapi.io/landingpage/storage-landingpage", {
-        method: "POST",
-        headers: {
+        method: "POST", /** Verbos HTTP: GET, POST, PUT, PATCH, DELETE */
+        headers: { /* Headers: No cabeçalho informa qual o tipo de informação estou enviando um JSON */
             "Content-type": "application/json"
         },
         
-        body: JSON.stringify(aluno)
+        body: JSON.stringify(aluno) /* JSON.stringfy transforma o objeto aluno em um JSON */
     }
-       /** Função de flecha */
+       /* Função de flecha */
     ).then (() => {
 
         button.disabled = false;
@@ -28,14 +32,3 @@ function salvarNaAPI() {
 
     })
 }
-
-
-/* método POST Toda a troca de informação na internet é feita em texto 
-    * Resposavel por fazer uma requisição em algum canto na internet
-    * 
-    * Verbos HTTP: GET, POST, PUT, PATCH, DELETE
-    * Headers: No cabeçalho informa qual o tipo de informação estou enviando um JSON
-    * 
-    * Quando uso json stringfy transformo o objeto aluno em um JSON
-    * 
-    */

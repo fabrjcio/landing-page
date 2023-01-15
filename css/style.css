@@ -12,7 +12,7 @@
 
 #topo {
     background-image: url("../images/banner_topo.png");
-    background-size: cover; /* Qtde que a imagem vai ocupar na tela */
+    background-size: cover; /* Proporção que a imagem vai ocupar na tela */
     background-repeat: no-repeat; /* Previne que a imagem seja duplicada*/
     padding: 0 100px;
 	padding-top: 30px;
@@ -56,6 +56,7 @@
 
 #topo .conteudo h6 {
 	font-size: 18px;
+    text-align: justify;
 }
 
 #topo .conteudo h1 {
@@ -64,6 +65,7 @@
 
 #topo .conteudo p {
 	margin-top: 26px;
+    text-align: justify;
 }
 
 #topo form {
@@ -114,6 +116,9 @@
     color: #333333;
 }
 
+/* Para cada breakpoint, é necessário reajustar as propriedades do css, tais como,
+position, top, right, width e etc. 
+Note que algumas propriedades serão herdadas em outros breakpoints */
 @media only screen and (max-width: 1024px) {
     #topo {
         padding-left: 60px;
@@ -126,20 +131,18 @@
     
 }
 
-@media only screen and (max-width: 768px) {
-    
+@media only screen and (max-width: 768px) {    
     #topo form {
         right: 60px;
-        position: initial; /* Resetando a position, top e right */
+        position: initial; 
         top: initial;
         right: initial;
         margin-top: 26px;
-        width: 100%; /* Mudando a largura do form*/
+        width: 100%; 
     }
 }
 
 @media only screen and (max-width: 480px) {
-    /* Ajustar o width dos conteúdos*/
     #topo {
         padding-left: 16px;
         padding-right: 16px;
